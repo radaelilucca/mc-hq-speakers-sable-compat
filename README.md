@@ -3,8 +3,8 @@
 > Make CC:HQ Speakers audio follow moving Sable sublevels.
 
 CC:HQ Speakers Sable Compatibility is a NeoForge addon for
-[CC:HQ Speakers](https://github.com/tiktop101/CC-HQ-Speakers) and
-[Sable](https://github.com/ryanhcode/sable). It fixes positional audio for
+[CC:HQ Speakers](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers) and
+[Sable](https://www.curseforge.com/minecraft/mc-mods/sable). It fixes positional audio for
 speakers placed inside Sable sublevels, such as moving vehicles and
 contraptions.
 
@@ -29,16 +29,8 @@ how CC:HQ Speakers work outside Sable sublevels.
 
 - Minecraft 1.21.1
 - NeoForge 21.1.236 or newer in the 1.21.1 line
-- [CC:HQ Speakers 1.1.4-neoforge-1.21.1](https://github.com/tiktop101/CC-HQ-Speakers)
-- [Sable 2.0.5 for NeoForge](https://github.com/ryanhcode/sable/releases)
-
-The mod intentionally supports only these tested dependency ranges:
-
-- CC:HQ Speakers `>= 1.1.4-neoforge-1.21.1` and `< 1.1.5`
-- Sable `>= 2.0.5` and `< 2.1.0`
-
-Install CC:HQ Speakers, Sable, and this addon together on both the client and
-server. Keep the same versions on every side of a multiplayer connection.
+- [CC:HQ Speakers 1.0.3 for NeoForge](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers)
+- [Sable 2.0.5 for NeoForge](https://www.curseforge.com/minecraft/mc-mods/sable)
 
 ## Installation
 
