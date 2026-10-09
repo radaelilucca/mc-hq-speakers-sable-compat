@@ -18,8 +18,38 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  */
 @Mixin(value = HQSpeakerClientHandler.class, remap = false)
 abstract class HQSpeakerClientHandlerMixin {
-    @Inject(method = "resolvePacketWorldPos", at = @At("RETURN"), cancellable = true, remap = false)
+    @Inject(
+        method = "resolvePacketWorldPos(Lnet/minecraft/world/level/Level;Lcom/tom/hqspeaker/network/HQSpeakerAudioPacket;)[F",
+        at = @At("RETURN"),
+        cancellable = true,
+        require = 0,
+        remap = false
+    )
     private static void hqspeakerSableCompat$projectOutOfSubLevel(
+        Level level,
+        HQSpeakerAudioPacket packet,
+        CallbackInfoReturnable<float[]> callback
+    ) {
+        hqspeakerSableCompat$projectPacketPosition(level, packet, callback);
+    }
+
+    @Inject(
+        method = "resolvePacketWorldPos(Lnet/minecraft/world/level/Level;Lcom/tom/hqspeaker/network/HQSpeakerAudioPacket;F)[F",
+        at = @At("RETURN"),
+        cancellable = true,
+        require = 0,
+        remap = false
+    )
+    private static void hqspeakerSableCompat$projectOutOfSubLevelWithPartialTick(
+        Level level,
+        HQSpeakerAudioPacket packet,
+        float partialTick,
+        CallbackInfoReturnable<float[]> callback
+    ) {
+        hqspeakerSableCompat$projectPacketPosition(level, packet, callback);
+    }
+
+    private static void hqspeakerSableCompat$projectPacketPosition(
         Level level,
         HQSpeakerAudioPacket packet,
         CallbackInfoReturnable<float[]> callback

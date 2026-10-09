@@ -14,7 +14,8 @@ abstract class HQSpeakerSoundMixin {
     @ModifyConstant(
         method = "<init>(Lcom/tom/hqspeaker/client/HQAudioStream;Lcom/tom/hqspeaker/network/HQSpeakerAudioPacket;FFF)V",
         constant = @Constant(floatValue = 3.0F),
-        require = 1,
+        // Newer versions already allow volume 16.
+        require = 0,
         remap = false
     )
     private float hqspeakerSableCompat$raiseClientVolumeCeiling(float originalMaximum) {

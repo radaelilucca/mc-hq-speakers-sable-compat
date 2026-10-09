@@ -1,5 +1,6 @@
 ### Gradle ###
 .gradle/
+.gradle-user-home/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/**/build/
@@ -10,7 +11,8 @@ build/
 *.iml
 *.ipr
 out/
-.vscode/
+.vscode/*
+!.vscode/tasks.json
 .classpath
 .project
 .settings/
@@ -27,6 +29,7 @@ repo/
 ### Local dependencies ###
 libs/*
 !libs/hqspeaker-1.1.4-neoforge-1.21.1.jar
+!libs/hqspeaker-neoforge-1.21.1-1.0.6.jar
 
 ### Generated resources and operating systems ###
 src/generated/**/.cache/

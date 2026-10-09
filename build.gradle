@@ -33,6 +33,12 @@ neoForge {
             client()
         }
 
+        clientSingleplayer {
+            client()
+            gameDirectory = project.file('run')
+            programArguments.addAll '--quickPlaySingleplayer', project.singleplayer_world
+        }
+
         server {
             server()
             programArgument '--nogui'

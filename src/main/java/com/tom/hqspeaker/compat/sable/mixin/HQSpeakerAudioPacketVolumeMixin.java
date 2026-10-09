@@ -11,7 +11,8 @@ abstract class HQSpeakerAudioPacketVolumeMixin {
     @ModifyConstant(
         method = "<init>(Ljava/util/UUID;Lcom/tom/hqspeaker/network/HQSpeakerAudioPacket$AudioFormat;FFFFIII[BLjava/lang/String;JLjava/util/UUID;I)V",
         constant = @Constant(floatValue = 3.0F),
-        require = 1,
+        // Newer versions already validate volume up to 16.
+        require = 0,
         remap = false
     )
     private float hqspeakerSableCompat$raisePacketVolumeCeiling(float originalMaximum) {

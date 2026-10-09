@@ -3,6 +3,14 @@
 All notable changes to CC:HQ Speakers Sable Compatibility are documented in
 this file.
 
+## [0.1.1] - 2026-10-09
+
+### Fixed
+
+- Restored compatibility with CC:HQ Speakers 1.0.4 while retaining support
+  for the earlier 1.1.4 NeoForge build.
+- Preserved speaker volume support up to 16 with updated CC:HQ Speakers.
+
 ## [0.1.0] - 2026-09-16
 
 ### Added

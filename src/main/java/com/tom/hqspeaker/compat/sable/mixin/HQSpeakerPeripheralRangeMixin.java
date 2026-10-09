@@ -22,7 +22,9 @@ abstract class HQSpeakerPeripheralRangeMixin {
     @ModifyConstant(
         method = {"sendToNearby", "sendAudioChunkedToNearby"},
         constant = @Constant(doubleValue = 1024.0D),
-        require = 2,
+        // Newer HQ Speaker versions calculate the radius through radiusSq();
+        // the constant exists only in older supported versions.
+        require = 0,
         remap = false
     )
     private double hqspeakerSableCompat$useVolumeScaledRecipientRadius(double originalRadiusSquared) {

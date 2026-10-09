@@ -29,7 +29,7 @@ how CC:HQ Speakers work outside Sable sublevels.
 
 - Minecraft 1.21.1
 - NeoForge 21.1.236 or newer in the 1.21.1 line
-- [CC:HQ Speakers 1.0.3 for NeoForge](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers)
+- [CC:HQ Speakers 1.0.4 or 1.1.4-neoforge-1.21.1](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers)
 - [Sable 2.0.5 for NeoForge](https://www.curseforge.com/minecraft/mc-mods/sable)
 
 ## Installation
@@ -41,13 +41,18 @@ how CC:HQ Speakers work outside Sable sublevels.
 
 ## Development
 
-The project uses Java 21. For a local client run, place the matching Sable JAR
-in `libs/` and run:
+The project uses Java 21. Place the matching Sable JAR in `libs/` and the
+required world mods, including CC:Tweaked, in `run/mods/`. On Windows, run:
 
 ```powershell
-.\gradlew.bat build
-.\gradlew.bat runClient
+.\scripts\gradle.ps1 build
+.\scripts\gradle.ps1 runClientSingleplayer
 ```
+
+The VS Code task `Minecraft: Run Client (Singleplayer)` opens the existing
+`run/saves/New World` save directly. Set `singleplayer_world` in
+`gradle.properties` to select another save folder. The Gradle helper selects
+an installed Java 21 JDK and keeps its cache in `.gradle-user-home/`.
 
 The published JAR is written to `build/libs/`. The HQ Speaker JAR in `libs/`
 is used only to compile and test this compatibility addon; it is not bundled
