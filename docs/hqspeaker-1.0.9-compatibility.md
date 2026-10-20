@@ -13,7 +13,7 @@ A faixa gerada no manifesto é:
 [1.0.4,1.0.5),[1.0.7,1.0.10),[1.1.4-neoforge-1.21.1,1.1.5)
 ```
 
-A versão do addon é 0.2.0. O suporte às versões anteriores do HQ Speaker
+A versão do addon é 0.3.0. O suporte às versões anteriores do HQ Speaker
 foi preservado.
 
 ## Comparação dos artefatos
@@ -51,10 +51,10 @@ Nenhum ponto acessado pelo addon exige adaptação.
 | Verificação | Resultado |
 | --- | --- |
 | `scripts/gradle.ps1 build --offline --console=plain` | Passou com Java 21; sem fontes de teste no projeto |
-| Manifesto dentro do JAR gerado | Faixa acima confirmada; versão 0.2.0 |
+| Manifesto dentro do JAR gerado | Faixa acima confirmada; versão 0.3.0 |
 | Interpretação da faixa com Maven `VersionRange` | Aceita 1.0.4, 1.0.7, 1.0.8, 1.0.9 e 1.1.4-neoforge-1.21.1; rejeita 1.0.3, 1.0.5, 1.0.6, 1.0.10 e 1.1.5 |
 | Conteúdo do JAR | Oito classes do addon e configuração dos mixins; sem classes de HQ Speaker/Sable ou dependências incorporadas |
-| Servidor dedicado | Iniciou até `Done`; carregou HQ Speaker 1.0.9, addon 0.2.0 e Sable 2.0.5 |
+| Servidor dedicado | Antes do incremento de versão, iniciou até `Done` com HQ Speaker 1.0.9, addon 0.2.0 e Sable 2.0.5; não repetido na 0.3.0 |
 | Mixins comuns no servidor | Cinco mixins aplicados, sem falha de aplicação registrada |
 | Bytecode exportado do servidor | Chamada à projeção Sable em `computeWorldPos` e redirecionamento de `maxVolume()` nas duas rotinas de volume confirmados |
 | Cliente | Carregou os mods e o manipulador de áudio; tentativa de conexão recusada porque o servidor de teste não estava disponível |
