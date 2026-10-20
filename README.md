@@ -29,7 +29,7 @@ how CC:HQ Speakers work outside Sable sublevels.
 
 - Minecraft 1.21.1
 - NeoForge 21.1.236 or newer in the 1.21.1 line
-- [CC:HQ Speakers 1.0.4 or 1.1.4-neoforge-1.21.1](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers)
+- [CC:HQ Speakers 1.0.4, 1.0.7–1.0.9, or 1.1.4-neoforge-1.21.1](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers)
 - [Sable 2.0.5 for NeoForge](https://www.curseforge.com/minecraft/mc-mods/sable)
 
 ## Installation
@@ -40,6 +40,9 @@ how CC:HQ Speakers work outside Sable sublevels.
 3. Start the game normally. No configuration is required.
 
 ## Development
+
+See the [HQ Speaker 1.0.9 compatibility audit](docs/hqspeaker-1.0.9-compatibility.md)
+for verification results and pending in-game checks.
 
 The project uses Java 21. Place the matching Sable JAR in `libs/` and the
 required world mods, including CC:Tweaked, in `run/mods/`. On Windows, run:
