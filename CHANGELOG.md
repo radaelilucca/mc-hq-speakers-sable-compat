@@ -3,6 +3,12 @@
 All notable changes to CC:HQ Speakers Sable Compatibility are documented in
 this file.
 
+## [0.4.0] - 2026-10-23
+
+### Added
+
+- Added compatibility with CC:HQ Speakers 1.1.0 and newer for NeoForge 1.21.1.
+
 ## [0.3.0] - 2026-10-19
 
 ### Added
