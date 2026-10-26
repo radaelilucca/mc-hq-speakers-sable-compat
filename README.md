@@ -1,76 +1,57 @@
-# CC:HQ Speakers Sable Compatibility
+<p align="center" style="text-align: center;"><img src="https://media.forgecdn.net/avatars/thumbnails/2051/675/256/256/639251954684035220.png" alt="CC:HQ Speakers Sable Compatibility"></p>
 
-> Make CC:HQ Speakers audio follow moving Sable sublevels.
+<p align="center" style="text-align: center;">Make <b>CC:HQ Speakers</b> audio follow moving <b>Sable</b> sublevels</p>
 
-CC:HQ Speakers Sable Compatibility is a NeoForge addon for
-[CC:HQ Speakers](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers) and
-[Sable](https://www.curseforge.com/minecraft/mc-mods/sable). It fixes positional audio for
-speakers placed inside Sable sublevels, such as moving vehicles and
-contraptions.
+<p align="center" style="background-color: #F4ECD0; text-align: center;"><img src="https://raw.githubusercontent.com/radaelilucca/mc-hq-speakers-sable-compat/main/docs/gallery/section-titles/what_it_is.png" alt="WHAT IT IS?" width="267"></p>
 
-## What it does
+A speaker inside a moving Sable sublevel can sound as if it were left behind, or fail to reach players nearby. **CC:HQ Speakers Sable Compatibility** makes speaker audio use the sublevel's visible world position, so it follows moving vehicles and contraptions.
 
-Without this addon, a CC:HQ Speaker inside a Sable sublevel uses the
-sublevel's local coordinates. Players near the visible contraption can then be
-outside the server's audio recipient radius, or hear the sound from the wrong
-place on the client.
+It also raises the CC:HQ Speakers volume limit. The addon adds no blocks, items, recipes, or commands, and does not change speakers outside Sable sublevels.
 
-This addon makes the speaker use its projected world position instead. Audio
-is delivered to players around the moving sublevel and follows it as it moves.
+---
 
-It also raises the supported CC:HQ Speaker volume limit from 3 to 16. The
-recipient radius scales with the selected volume: volume 1 reaches 16 blocks,
-and volume 16 reaches up to 256 blocks.
+<p align="center" style="background-color: #F4ECD0; text-align: center;"><img src="https://raw.githubusercontent.com/radaelilucca/mc-hq-speakers-sable-compat/main/docs/gallery/section-titles/what_can_it_do.png" alt="WHAT CAN IT DO?" width="375"></p>
 
-The addon does not add blocks, items, recipes, or commands. It does not change
-how CC:HQ Speakers work outside Sable sublevels.
+### Audio that moves with your build
 
-## Compatibility
+**Place a speaker inside a Sable sublevel and nearby players hear it from the moving build.** Its sound position follows the sublevel as it moves.
 
-- Minecraft 1.21.1
-- NeoForge 21.1.236 or newer in the 1.21.1 line
-- [CC:HQ Speakers 1.0.4, 1.0.7–1.0.9, or 1.1.4-neoforge-1.21.1](https://www.curseforge.com/minecraft/mc-mods/cc-hq-speakers)
-- [Sable 2.0.5 for NeoForge](https://www.curseforge.com/minecraft/mc-mods/sable)
+### A wider volume range
 
-## Installation
+**Choose a CC:HQ Speakers volume from 1 to 16.** The recipient radius scales with the selected level, from 16 blocks at volume 1 to up to 256 blocks at volume 16.
 
-1. Install NeoForge for Minecraft 1.21.1.
-2. Put the matching CC:HQ Speakers JAR, Sable JAR, and this addon's JAR in the
-   instance or server `mods` folder.
-3. Start the game normally. No configuration is required.
+---
 
-## Development
+<p align="center" style="background-color: #F4ECD0; text-align: center;"><img src="https://raw.githubusercontent.com/radaelilucca/mc-hq-speakers-sable-compat/main/docs/gallery/section-titles/how-do-i-use-it.png" alt="HOW DO I USE IT?" width="371"></p>
 
-See the [HQ Speaker 1.0.9 compatibility audit](docs/hqspeaker-1.0.9-compatibility.md)
-for verification results and pending in-game checks.
+1. Install this addon, **CC:HQ Speakers**, and **Sable** on both the client and server.
+2. Place and configure a CC:HQ Speaker inside a Sable sublevel.
+3. Set the speaker volume in its usual controls. Nearby players can hear it from the sublevel's current position as it moves.
 
-The project uses Java 21. Place the matching Sable JAR in `libs/` and the
-required world mods, including CC:Tweaked, in `run/mods/`. On Windows, run:
+> **Heads up:** this compatibility applies to speakers inside Sable sublevels. Speakers elsewhere keep their usual CC:HQ Speakers behavior.
 
-```powershell
-.\scripts\gradle.ps1 build
-.\scripts\gradle.ps1 runClientSingleplayer
-```
+---
 
-The VS Code task `Minecraft: Run Client (Singleplayer)` opens the existing
-`run/saves/New World` save directly. Set `singleplayer_world` in
-`gradle.properties` to select another save folder. The Gradle helper selects
-an installed Java 21 JDK and keeps its cache in `.gradle-user-home/`.
+<p align="center" style="background-color: #F4ECD0; text-align: center;"><img src="https://raw.githubusercontent.com/radaelilucca/mc-hq-speakers-sable-compat/main/docs/gallery/section-titles/requirements.png" alt="REQUIREMENTS" width="355"></p>
 
-The published JAR is written to `build/libs/`. The HQ Speaker JAR in `libs/`
-is used only to compile and test this compatibility addon; it is not bundled
-into the output.
+Install the addon on both the client and server.
 
-## License and credits
+- **Minecraft 1.21.1** with **NeoForge 21.1.236** or newer in the 1.21.1 line
+- **CC:HQ Speakers 1.0.4**, **1.0.7–1.0.9**, or **1.1.0 and newer**
+- **Sable 2.0.5**
 
-CC:HQ Speakers Sable Compatibility is distributed under the
-[MIT License](LICENSE).
+---
 
-CC:HQ Speakers and Sable are separate projects owned by their respective
-authors. This addon is independent and is not affiliated with or endorsed by
-either project.
+<p align="center" style="background-color: #F4ECD0; text-align: center;"><img src="https://raw.githubusercontent.com/radaelilucca/mc-hq-speakers-sable-compat/main/docs/gallery/section-titles/found_a_bug.png" alt="FOUND A BUG?" width="317"></p>
 
-## AI disclosure
+[Open an issue on GitHub](https://github.com/radaelilucca/mc-hq-speakers-sable-compat/issues). Include your Minecraft, NeoForge, CC:HQ Speakers, Sable, and addon versions. Note whether the speaker was inside a moving sublevel and where you and other players were standing.
 
-AI tools assisted with the research, implementation, and documentation of this
-project.
+---
+
+<p align="center" style="background-color: #F4ECD0; text-align: center;"><img src="https://raw.githubusercontent.com/radaelilucca/mc-hq-speakers-sable-compat/main/docs/gallery/section-titles/can_i_use.png" alt="CAN I USE THIS IN A MODPACK?" width="679"></p>
+
+**Yes.** This project is licensed under the **MIT License**. See [LICENSE](https://github.com/radaelilucca/mc-hq-speakers-sable-compat/blob/main/LICENSE).
+
+---
+
+*For development details, compatibility evidence, and version history, see the [1.1.0 compatibility audit](https://github.com/radaelilucca/mc-hq-speakers-sable-compat/blob/main/docs/hqspeaker-1.1.0-compatibility.md) and [CHANGELOG](https://github.com/radaelilucca/mc-hq-speakers-sable-compat/blob/main/CHANGELOG.md).*
